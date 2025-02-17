@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: "PlusJakartaSans";
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1; 
+}
+
+@font-face {
+    font-family: "PlusJakartaSans" ;
+    src: url(font/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+
+.headercontent{
+    display: flex;    
+    background-color:#0d121f;
+    height: 85px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: solid 2px #1e232f;
+    
+}
+
+#navbar2{
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+
+
+#navbar3 a{
+    margin-right: 20px;
+}
+
+a{    
+    text-decoration: none;
+    color: white; 
+    position: relative;      
+}
+
+.navlink{
+    color: white;
+}
+
+#loginButton{
+    background-color: #3d81db;
+    padding: 13px 17px;
+    border: none;
+    border-radius: 20px;
+}
+
+a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom left;
+    transition: transform 0.5s ease; 
+}
+
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    
+}
+
+#loginButton:hover{
+    filter: brightness(75%);
+    cursor: pointer;
+}
+
+.hero{
+    background-color: #2e364a;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    background: rgba(12,18,30,1);
+    
+    
+}
+
+.heroTitle{
+    font-size: 4rem;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(234,239,246,1) 0%, rgba(172,193,221,1) 75%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    opacity: 0;
+    animation: body-load 1000ms ease-out forwards;
+    
+}
+
+.heroDesc{
+    color: #7e8fa8;
+    text-align: center;
+    margin: 30px 0 10px 0;
+    font-size: 1.25rem;        
+    animation: body-load 1000ms ease-out forwards ;
+    animation-delay: 400ms;
+    opacity: 0;
+    
+}
+
+.heroButton{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    gap: 20px;
+    animation: body-load 1000ms ease-out forwards ;
+    animation-delay: 800ms;
+    opacity: 0;
+    
+}
+
+#heroButton1{
+    background-color: #3d81db;
+    color: white;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 20px;
+    
+}
+
+#heroButton2{
+    background-color:#1a202c;
+    color: white;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.about{
+    background-image: url(img/laundromat-with-girl-legs.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    background-position-y: -20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.about-secondTitle{
+    color: #5681cf;
+
+}
+
+.about-title{
+    margin: 20px 0 40px 0;
+}
+
+.break{
+    display: block;
+    height: 5px;
+}
+
+
+
+@keyframes body-load{
+    0%{
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+
+   
+    
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.howItWorks{
+    background-color: #0c121e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+
+.howTitle{
+    text-align: center;
+    
+}
+
+.howTitle1{
+    color: #3365a1;
+}
+
+.howTitle2{
+    color: white;
+    margin: 5px 0;
+}
+
+.howTitle3{
+    color: #7e8fa8;
+}
+
+.howCards{  
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 70px;
+    
+}
+
+.card{
+    width: 210px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.svg1{
+    margin-left: 8px;
+    margin-top: 10px;
+    
+}
+.svg2{
+    margin-left: 12px;
+    margin-top: 10px;
+    display: flex;
+}
+.svg3{
+    margin-left: 12px;
+    margin-top: 10px;
+    display: flex;
+}
+
+
+.howCard1{
+    padding: 10px;
+}
+.howCard2{
+    padding: 10px;
+}
+
+.howCard3{
+    padding: 10px;
+    
+   
+}
+
+.text1,.text2,.text3{
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+
+.number{
+    background-color: #3d81db;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 15px;
+    text-align: center;
+    position: absolute;
+    font-size: 18px;
+    
+}
+
+
+
+.howButton1{
+    background-color: #457ed6;
+    padding: 13px 17px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.howButtons{
+    gap: 10px;
+    display: flex;
+
+}
+
+
+
+.howButton2{
+    background-color: #1a202c;
+    padding: 13px 17px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.download{
+    display: flex;
+    background-color: #0c121e;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.downloadImg {
+    width: 50%;  /* A div szélessége */
+    height: 500px;
+    float: right;
+    overflow: hidden; /* Levágja a kilógó részt */
+    position: relative;
+    background-color: red;
+    
+  }
+  
+.downloadImg  img {
+    width: 100%; /* Szélesebb, mint a div */
+    height: 500px;
+    position: absolute;
+    top: 110px; /* Feljebb tolja a képet, hogy kilógjon */
+    left: 140px;
+    border-left: 10px solid #3d424c;
+    border-top: 10px solid #3d424c;
+    border-top-left-radius: 50px;
+       
+  }
+
+  .text{
+    background-color: rebeccapurple;
+  }
+
+.text h4{
+    color: #3e77c5;
+}
+
+.text h1{
+    color: white;
+    margin: 30px 0px;
+}
+
+.text p{
+    color: #7e8fa8;
+}
+
